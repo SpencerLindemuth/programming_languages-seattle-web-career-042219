@@ -12,6 +12,7 @@ def reformat_languages(languages)
         array = new_hash[lang][:style]
         array << style
         new_hash[lang][:style] = array
+        array = []
       else
         array << style
         new_hash[lang] = {:type => type[:type], :style => array }
