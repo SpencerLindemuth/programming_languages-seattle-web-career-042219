@@ -12,4 +12,5 @@ def reformat_languages(languages)
       array = []
     end
   end
+  new_hash
 end
