@@ -12,7 +12,6 @@ def reformat_languages(languages)
       array = []
     end
   end
-  binding.pry
   new_hash
 
 end
