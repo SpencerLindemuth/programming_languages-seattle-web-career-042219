@@ -7,14 +7,14 @@ def reformat_languages(languages)
   array = []
   languages.each do |style, language|
     language.each do |lang, type|
-      if array.length == 0
-        array << style
-        new_hash[lang] = {:type => type[:type], :style => array }
-      elsif new_hash[lang][:style].length != 0
+      if array.length != 0
         new_hash[lang] = {:type => type[:type]}
         array = new_hash[lang][:style]
         array << style
         new_hash[lang][:style] = array
+      else
+          array << style
+          new_hash[lang] = {:type => type[:type], :style => array }
       end
     end
   end
