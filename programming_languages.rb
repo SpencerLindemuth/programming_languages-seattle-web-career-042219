@@ -8,7 +8,7 @@ def reformat_languages(languages)
   languages.each do |style, language|
     language.each do |lang, type|
       binding.pry
-      if array.length != 0
+      if new_hash[lang][:style] != nil
         new_hash[lang] = {:type => type[:type]}
         array = new_hash[lang][:style]
         array << style
